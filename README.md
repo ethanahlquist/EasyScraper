@@ -5,7 +5,7 @@ This is a script to aid my brother in webscraping data from websites.
 The goal is to edit input fields of proprietary calculator websites, 
 in order to model input-output responses.
 
-# instructions
+# Instructions
 
 ### Clone repository
 
