@@ -17,10 +17,10 @@ pip3 install -r requirements.txt
 ```
 ### Run Program
 ```
-   python3 ./main.py
+python3 ./main.py
 ```
 
 ### Check Websites input fields
 ```
-   python3 ./getInputs.py
+python3 ./getInputs.py
 ```
