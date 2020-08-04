@@ -1,9 +1,9 @@
 ---
-title: Jesse Webscraper
+title: EasyScraper
 author: Ethan Ahlquist
 --- 
 
-# Jesse Webscraper 👌
+# EasyScraper 👌
 
 This is a script to aid my brother in webscraping data from websites. 
 The goal is to edit input fields of proprietary calculator websites, 
@@ -19,5 +19,4 @@ in order to model input-output responses.
 
 ### Run Program
 
-   python3 ./scrapper.py
-# EasyScraper
+   python3 ./main.py
