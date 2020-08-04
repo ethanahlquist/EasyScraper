@@ -24,3 +24,10 @@ python3 ./main.py
 ```
 python3 ./getInputs.py
 ```
+### Edit File `userCode.py`
+
+Editing `userCode.py` will give you control of many things:
+- the target website
+- the input field targets
+- the way data is stored in `data.csv`
+- how the program views the data.
