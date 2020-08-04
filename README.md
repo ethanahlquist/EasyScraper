@@ -1,9 +1,5 @@
----
-title: EasyScraper
-author: Ethan Ahlquist
---- 
 
-# EasyScraper 👌
+# EasyScraper 👌 - <em>Ethan Ahlquist</em>
 
 This is a script to aid my brother in webscraping data from websites. 
 The goal is to edit input fields of proprietary calculator websites, 
