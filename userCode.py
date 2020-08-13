@@ -1,22 +1,28 @@
 import time
 import random
-from scraper import SeleniumDriver
-from scraper import ScrapElement
+from driver import SeleniumDriver
+from element import ScrapElement
 from data import draw_plot_from_csv
 from selenium.webdriver.common.by import By
 
-URL = 'https://www.intemag.com/magnet-pull-calculations-disc-magnet-with-steel-plate'
-driver = SeleniumDriver()
-driver.get(URL)
+# Shared Global Dictionary
+configDict = {
+    'URL': 'https://www.intemag.com/magnet-pull-calculations-disc-magnet-with-steel-plate',
+    'csv': 'data.csv',
+    'driver': SeleniumDriver(),
+    'elements': None
+}
+
 
 '''
 I don't know how to do this better, but this is just so we can give all the
 funtions access to the webdriver, without adding another param.
 '''
-def Element(by, token): return ScrapElement(by, token, driver)
+def Element(by, token): return ScrapElement(by, token, configDict['driver'])
 
 
-e = {
+# Element Dictionary
+configDict['elements'] = {
     'diam': Element(By.NAME, 'diameter1'),
     'length': Element(By.NAME, 'length1'),
     'br': Element(By.NAME, 'br1'),
@@ -30,6 +36,16 @@ def csv_write_elements(e, dictwriter):
     # Maps row to the value field of the objects, not the element themselves
     row = dict(map(lambda pair: (pair[0], pair[1].value), e.items()))
     dictwriter.writerow(row)
+
+
+"""
+Think about moving this to data.py
+"""
+
+
+"""
+e is equal to configDict['elements'], but this is much more portable
+"""
 
 
 def dataLoop(e, dictwriter):
@@ -79,6 +95,6 @@ def randomLoop(e, dictwriter):
 
 def afterScrap(csvfile):
     # Not needed since matlab is better
-    draw_plot_from_csv('data_csv')
+    draw_plot_from_csv(csvfile)
     # MyAnimation()
     pass

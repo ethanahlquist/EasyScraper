@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""
+THIS IS UNFINISHED, AND LIKELY NOT NEEDED.
+Matlab seems to do a better job of displaying 3D plots.
+"""
+
 from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
 import numpy as np  # Math Module
@@ -19,10 +24,6 @@ def draw_plot_from_csv(csvfile):
     y = df['length']
     z = df['br']
     c = df['gauss']
-    #x = np.random.standard_normal(100)
-    #y = np.random.standard_normal(100)
-    #z = np.random.standard_normal(100)
-    #c = np.random.standard_normal(100)
     ax.set_xlabel('diameter')
     ax.set_ylabel('length')
     ax.set_zlabel('br')
@@ -45,10 +46,6 @@ def MyAnimation():
     y = df['length']
     #z = df['br1']
     z = df['gauss']
-    #x = np.random.standard_normal(100)
-    #y = np.random.standard_normal(100)
-    #z = np.random.standard_normal(100)
-    #c = np.random.standard_normal(100)
     ax.set_xlabel('diameter')
     ax.set_ylabel('length')
     ax.set_zlabel('br')
