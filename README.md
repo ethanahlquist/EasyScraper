@@ -7,12 +7,27 @@ in order to model input-output responses.
 
 # Instructions
 
-### Clone repository
-
+### Clone the Repository 🔥
+```
+git clone https://github.com/ethanahlquist/EasyScraper.git
+```
 ### Get Requirements
-
-   pip3 install -r requirements.txt
-
+```
+pip3 install -r requirements.txt
+```
 ### Run Program
+```
+python3 ./main.py
+```
 
-   python3 ./main.py
+### Check Websites input fields
+```
+python3 ./getInputs.py
+```
+### Edit File `userCode.py`
+
+Editing `userCode.py` will give you control of many things:
+- the target website
+- the input field targets
+- the way data is stored in `data.csv`
+- how the program views the data.
