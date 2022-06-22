@@ -1,6 +1,6 @@
 bs4==4.6.3
 matplotlib==3.2.1
-numpy==1.18.3
+numpy==1.22.0
 celluloid==0.2.0
 selenium==3.141.0
 pandas==1.0.1
